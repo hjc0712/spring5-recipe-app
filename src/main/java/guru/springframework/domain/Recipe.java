@@ -59,4 +59,49 @@ public class Recipe {
         this.ingredients.add(ingredient);
         return this;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrepTime(Integer prepTime) {
+        this.prepTime = prepTime;
+    }
+
+    public void setCookTime(Integer cookTime) {
+        this.cookTime = cookTime;
+    }
+
+    public void setDirections(String directions) {
+        this.directions = directions;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Integer getPrepTime() {
+        return prepTime;
+    }
+
+    public Integer getCookTime() {
+        return cookTime;
+    }
+
+    public String getDirections() {
+        return directions;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public Notes getNotes() {
+        return notes;
+    }
 }
