@@ -1,8 +1,11 @@
 package guru.springframework.domain;
 
+<<<<<<< HEAD
 import lombok.Getter;
 import lombok.Setter;
 
+=======
+>>>>>>> starting_from_jpa_query
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,8 +13,11 @@ import java.util.Set;
 /**
  * Created by jt on 6/13/17.
  */
+<<<<<<< HEAD
 @Getter
 @Setter
+=======
+>>>>>>> starting_from_jpa_query
 @Entity
 public class Recipe {
 
@@ -47,6 +53,7 @@ public class Recipe {
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
+<<<<<<< HEAD
     public void setNotes(Notes notes) {
         if (notes != null) {
             this.notes = notes;
@@ -58,20 +65,47 @@ public class Recipe {
         ingredient.setRecipe(this);
         this.ingredients.add(ingredient);
         return this;
+=======
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+>>>>>>> starting_from_jpa_query
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
+<<<<<<< HEAD
+=======
+    public Integer getPrepTime() {
+        return prepTime;
+    }
+
+>>>>>>> starting_from_jpa_query
     public void setPrepTime(Integer prepTime) {
         this.prepTime = prepTime;
     }
 
+<<<<<<< HEAD
+=======
+    public Integer getCookTime() {
+        return cookTime;
+    }
+
+>>>>>>> starting_from_jpa_query
     public void setCookTime(Integer cookTime) {
         this.cookTime = cookTime;
     }
 
+<<<<<<< HEAD
     public void setDirections(String directions) {
         this.directions = directions;
     }
@@ -91,17 +125,85 @@ public class Recipe {
 
     public Integer getCookTime() {
         return cookTime;
+=======
+    public Integer getServings() {
+        return servings;
+    }
+
+    public void setServings(Integer servings) {
+        this.servings = servings;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+>>>>>>> starting_from_jpa_query
     }
 
     public String getDirections() {
         return directions;
     }
 
+<<<<<<< HEAD
     public Difficulty getDifficulty() {
         return difficulty;
+=======
+    public void setDirections(String directions) {
+        this.directions = directions;
+    }
+
+    public Byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(Byte[] image) {
+        this.image = image;
+>>>>>>> starting_from_jpa_query
     }
 
     public Notes getNotes() {
         return notes;
     }
+<<<<<<< HEAD
+=======
+
+    public void setNotes(Notes notes) {
+        this.notes = notes;
+    }
+
+    public Set<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
+    }
+>>>>>>> starting_from_jpa_query
 }
