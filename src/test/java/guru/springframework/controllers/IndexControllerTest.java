@@ -42,7 +42,7 @@ public class IndexControllerTest {
 
     @Test
     public void testMockMVC() throws Exception{
-        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller).build(); //still running unit test by setting up this way 
+        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller).build(); //still running unit test by setting up this way
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("index"));
