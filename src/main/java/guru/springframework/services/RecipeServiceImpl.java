@@ -54,7 +54,7 @@ public class RecipeServiceImpl implements RecipeService {
 
         Recipe detachedRecipe = recipeCommandToRecipe.convert(command);
 
-        Recipe savedRecipe = recipeRepository.save(detachedRecipe);
+        Recipe savedRecipe = recipeRepository.save(detachedRecipe);  // Save the recipe into the database, so it will be recorded, not only one-time posting
         log. debug("Save Recipe:" + savedRecipe.getId());
         return recipeToRecipeCommand.convert(savedRecipe);
     }
